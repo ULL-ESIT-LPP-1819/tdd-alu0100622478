@@ -14,7 +14,8 @@ RSpec.describe Nutricion do
 		expect(@alimento1.saturadas).to eq(2.4)
 	end
 	it "Hidratos de carbono" do
-		expect(@aliment1.hidratos).to eq(4.6)
+		expect(@alimento1.hidratos).to eq(4.6)
+		
 	end
 
  end
