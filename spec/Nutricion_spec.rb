@@ -6,4 +6,10 @@ RSpec.describe Nutricion do
   it "does something useful" do
     expect(false).to eq(false)
   end
+  it "la clase Nutricion existe" do
+	  expect(Nutricion
 end
+
+
+  Rspec.describe Alimento do
+  end
