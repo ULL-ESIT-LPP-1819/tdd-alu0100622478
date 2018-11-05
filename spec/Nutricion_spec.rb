@@ -8,7 +8,7 @@ RSpec.describe Nutricion do
 		expect(@alimento1.nombre).to eq("Leche")
 	end
 	it "Grasas" do
-		expect(@alimento1.grasas).to eq(3.5)
+		expect(@alimento1.grasas).to eq(3.6)
 	end
  end
        
