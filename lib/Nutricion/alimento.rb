@@ -1,5 +1,6 @@
 class Alimento
-	attr_reader :nombre, :racion, :grasas, :saturadas, :hidratos, :azucar, :proteina, :sal, :mono, :poli, :fibra
+	attr_reader :nombre, :racion, :grasas, :saturadas, :hidratos, :azucar, :proteina, :sal, :mono, :poli, :fibra, 
+		:kj
 
 	def initialize(nombre, racion, grasas, saturadas, hidratos, azucar, proteina, sal, *opcional)
 		@nombre,@racion = nombre, racion
@@ -25,5 +26,13 @@ class Alimento
 		else 
 			@kcal = (@grasas*9 + @hidratos*4 + @sal*6)
 		end
+	end
+	def kj_r
+		#if @fibra != nil
+		#	@kj_r = (@grasas*37 + @hidratos*17 + @fibra*8 + @proteina*17 + @sal*25)*(@racion/100)
+		#else
+		#	@kj_r = (@grasas*37+@hidratos*17+@proteina*17+@sal*25)*(@racion/100)
+		#end
+		@kj_r = self.kj * (@racion/100.0)
 	end
 end
