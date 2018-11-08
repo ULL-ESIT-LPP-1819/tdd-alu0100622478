@@ -93,6 +93,10 @@ RSpec.describe Nutricion do
 		expect(@alimento1.ir_s).to eq(1.666666666666666667)
 		expect(@alimento2.ir_s).to eq(8.333333333333333334)
 	end
+	it "Salida Formateada" do
+		expect(@alimento1.to_s).to eq()
+		expect(@alimento2.to_s).to eq()
+	end
 	
  end
        
