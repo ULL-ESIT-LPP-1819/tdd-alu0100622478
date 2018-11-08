@@ -38,4 +38,7 @@ class Alimento
 	def kcal_r
 		@kcal_r = self.kcal * (@racion/100.0)
 	end
+	def ir_vkj
+		@ir_vkj = (self.kj*100.0) / 8400.0
+	end
 end
