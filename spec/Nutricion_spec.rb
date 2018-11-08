@@ -74,8 +74,8 @@ RSpec.describe Nutricion do
 		expect(@alimento2.ir_g).to eq(20)
 	end
 	it "IR Acidos grasos Saturados" do
-		expect(@alimento1.ir_ag).to eq(3)
-		expect(@alimento2.ir_ag).to eq(4)
+		expect(@alimento1.ir_ag).to eq(12.0)
+		expect(@alimento2.ir_ag).to eq(25.0)
 	end	
 
  end

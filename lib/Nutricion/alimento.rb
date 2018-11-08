@@ -47,4 +47,7 @@ class Alimento
 	def ir_g
 		@ir_g = (@grasas*100) / 70.0
 	end
+	def ir_ag
+		@ir_ag = (@saturadas*100) / 20.0
+	end
 end
