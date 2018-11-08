@@ -68,6 +68,10 @@ RSpec.describe Nutricion do
 		expect(@alimento2.ir_vkj).to eq(21.51904761904762)
 		expect(@alimento1.ir_vkcal).to eq(2.57)
 		expect(@alimento2.ir_vkcal).to eq(20.25)
+	end
+	it "IR grasa total" do
+		expect(@alimento1.ir_g).to eq(5.142857142857143)
+		expect(@alimento2.ir_g).to eq(20)
 	end	
 
  end

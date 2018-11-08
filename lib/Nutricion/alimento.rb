@@ -44,4 +44,7 @@ class Alimento
 	def ir_vkcal
 		@ir_vkcal = (self.kcal*100.0) / 2000.0
 	end
+	def ir_g
+		@ir_g = (@grasas*100) / 70.0
+	end
 end
