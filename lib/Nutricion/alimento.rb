@@ -50,4 +50,7 @@ class Alimento
 	def ir_ag
 		@ir_ag = (@saturadas*100) / 20.0
 	end
+	def ir_h
+		@ir_h = (@hidratos*100.0) / 260.0
+	end
 end
