@@ -10,6 +10,13 @@ class Alimento
 		@mono = opcional[0]
 		@poli = opcional[1]
 		@fibra = opcional[2]
-		
+	end
+
+	def kj
+		if @fibra != nil 
+			@kj = (@grasas * 37 + @hidratos * 17 + @fibra * 8 + @proteina * 17 + @sal * 25) 
+		else 
+			@kj = (@grasas * 37 + @hidratos * 17 + @proteina * 17 + @sal * 25)
+		end
 	end
 end
