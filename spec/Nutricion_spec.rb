@@ -46,6 +46,10 @@ RSpec.describe Nutricion do
 		expect(@alimento1.racion).to eq(100)
 		expect(@alimento2.racion).to eq(45)
 	end
+
+	it "Valor energético kj" do
+		expect(@alimento1.kj).to eq(264)
+	end
 		
 
  end
