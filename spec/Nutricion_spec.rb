@@ -34,7 +34,7 @@ RSpec.describe Nutricion do
 		expect(@alimento2.sal).to eq(0.5)
 	end
 	it "Monoinsaturadas" do
-		expect(@alimento2.mono).to eq(6.9)
+		expect(@alimento2.mono).to eq([6.9])
 	end
 
  end
