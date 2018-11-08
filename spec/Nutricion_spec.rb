@@ -85,6 +85,10 @@ RSpec.describe Nutricion do
 		expect(@alimento1.ir_az).to eq(5.111111111111111)
 		expect(@alimento2.ir_az).to eq(30.0)
 	end
+	it "IR Proteínas" do
+		expect(@alimento1.ir_p).to eq(15.0)
+		expect(@alimento2.ir_p).to eq(5.0)
+	end
 	
  end
        
