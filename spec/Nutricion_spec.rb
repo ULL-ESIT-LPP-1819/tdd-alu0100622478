@@ -3,7 +3,7 @@ RSpec.describe Nutricion do
  describe "# Alimento" do
   	before :each do
 		@alimento1 = Alimento.new("Leche",3.6,2.4,4.6,4.6,3.1,0.1)
-		@alimento2 = Alimento.new("Muesli con frutas",14,5,66,27,6.3,0.5,6.9,1.8)
+		@alimento2 = Alimento.new("Muesli con frutas",14,5,66,27,6.3,0.5,6.9,1.8,6)
   	end
 	it "Nombre" do
 		expect(@alimento1.nombre).to eq("Leche")
@@ -39,6 +39,10 @@ RSpec.describe Nutricion do
 	it "Polisaturadas" do
 		expect(@alimento2.poli).to eq(1.8)
 	end
+	it "Fibra alimentaria" do
+		expect(@alimento2.fibra).to eq(6)
+	end
+		
 
  end
        
