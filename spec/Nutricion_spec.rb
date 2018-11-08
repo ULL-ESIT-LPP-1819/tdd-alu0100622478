@@ -82,8 +82,8 @@ RSpec.describe Nutricion do
 		expect(@alimento2.ir_h).to eq(25.384615384615383)
 	end
 	it " IR Azucares" do
-		expect(@alimento1.ir_az).to eq(20)
-		expect(@alimento2.ir_az).to eq(20)
+		expect(@alimento1.ir_az).to eq(5.111111111111111)
+		expect(@alimento2.ir_az).to eq(30.0)
 	end
 	
  end

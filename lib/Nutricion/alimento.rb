@@ -53,4 +53,7 @@ class Alimento
 	def ir_h
 		@ir_h = (@hidratos*100.0) / 260.0
 	end
+	def ir_az
+		@ir_az = (@azucar*100.0) / 90.0
+	end
 end
