@@ -17,6 +17,9 @@ RSpec.describe Nutricion do
 		expect(@alimento1.hidratos).to eq(4.6)
 		
 	end
+	it "Azúcares" do
+		expect(@alimento1.azucar).to eq(4.6)
+	end
 
  end
        
