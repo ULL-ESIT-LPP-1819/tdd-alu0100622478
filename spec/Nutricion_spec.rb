@@ -77,6 +77,10 @@ RSpec.describe Nutricion do
 		expect(@alimento1.ir_ag).to eq(12.0)
 		expect(@alimento2.ir_ag).to eq(25.0)
 	end	
+	it "IR Hidratos" do
+		expect(@alimento1.ir_h).to eq(10)
+		expect(@alimento2.ir_h).to eq(20)
+	end
 
  end
        
