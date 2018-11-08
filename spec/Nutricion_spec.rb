@@ -64,8 +64,8 @@ RSpec.describe Nutricion do
 		expect(@alimento2.kcal_r).to eq(182.25)
 	end	
 	it "IR valor energético" do
-		expect(@alimento1.ir_vkj).to eq(3.16)
-		expect(@alimento2.ir_vkj).to eq(9.68)
+		expect(@alimento1.ir_vkj).to eq(3.173809523809524)
+		expect(@alimento2.ir_vkj).to eq(21.51904761904762)
 	end	
 
  end
