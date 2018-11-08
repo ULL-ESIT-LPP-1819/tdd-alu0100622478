@@ -2,7 +2,7 @@ RSpec.describe Nutricion do
  	
  describe "# Alimento" do
   	before :each do
-		@alimento1 = Alimento.new("Leche",3.6,2.4,4.6)
+		@alimento1 = Alimento.new("Leche",3.6,2.4,4.6,4.6)
   	end
 	it "Nombre" do
 		expect(@alimento1.nombre).to eq("Leche")
