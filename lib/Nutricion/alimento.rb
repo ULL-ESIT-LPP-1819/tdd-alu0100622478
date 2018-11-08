@@ -35,4 +35,7 @@ class Alimento
 		#end
 		@kj_r = self.kj * (@racion/100.0)
 	end
+	def kcal_r
+		@kcal_r = self.kcal * (@racion/100.0)
+	end
 end

@@ -61,7 +61,7 @@ RSpec.describe Nutricion do
 	end
 	it "Valor energético kcal por ración" do
 		expect(@alimento1.kcal_r).to eq(51.4)
-		expect(@alimento2.kacl_r).to eq(182.25)
+		expect(@alimento2.kcal_r).to eq(182.25)
 	end	
 		
 
