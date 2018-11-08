@@ -1,5 +1,5 @@
 class Alimento
-	attr_reader :nombre, :grasas, :saturadas, :hidratos, :azucar, :proteina, :sal, :mono, :poli
+	attr_reader :nombre, :grasas, :saturadas, :hidratos, :azucar, :proteina, :sal, :mono, :poli, :fibra
 
 	def initialize(nombre, grasas, saturadas, hidratos, azucar, proteina, sal, *opcional)
 		@nombre = nombre
@@ -9,6 +9,7 @@ class Alimento
 		@sal = sal
 		@mono = opcional[0]
 		@poli = opcional[1]
+		@fibra = opcional[2]
 		
 	end
 end
