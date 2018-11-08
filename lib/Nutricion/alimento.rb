@@ -59,4 +59,7 @@ class Alimento
 	def ir_p
 		@ir_p = (@proteina*100.0) / 50.0
 	end
+	def ir_s
+		@ir_s = (@sal*100.0) / 6
+	end
 end

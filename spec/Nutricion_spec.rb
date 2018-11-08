@@ -90,8 +90,8 @@ RSpec.describe Nutricion do
 		expect(@alimento2.ir_p).to eq(12.6)
 	end
 	it "IR Sal" do
-		expect(@alimento1.ir_s).to eq(2.0)
-		expect(@alimento2.ir_s).to eq(3.0)
+		expect(@alimento1.ir_s).to eq(1.666666666666666667)
+		expect(@alimento2.ir_s).to eq(8.333333333333333334)
 	end
 	
  end
