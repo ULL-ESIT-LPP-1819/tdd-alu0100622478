@@ -52,8 +52,8 @@ RSpec.describe Nutricion do
 		expect(@alimento2.kj).to eq(1807.6)
 	end
 	it "valor energético kcal" do
-		expect(@alimento1.kcal).to eq(63)
-		expect(@alimento2.kcal).to eq(427)
+		expect(@alimento1.kcal).to eq(51.4)
+		expect(@alimento2.kcal).to eq(405)
 	end
 		
 

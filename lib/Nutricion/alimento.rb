@@ -19,4 +19,11 @@ class Alimento
 			@kj = (@grasas * 37 + @hidratos * 17 + @proteina * 17 + @sal * 25)
 		end
 	end
+	def kcal
+		if @fibra !=nil
+			@kcal = (@grasas*9 + @hidratos*4 + @fibra*2 + @sal*6)
+		else 
+			@kcal = (@grasas*9 + @hidratos*4 + @sal*6)
+		end
+	end
 end
