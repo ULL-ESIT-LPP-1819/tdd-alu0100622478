@@ -1,6 +1,5 @@
 class Alimento
-	attr_reader :nombre, :racion, :grasas, :saturadas, :hidratos, :azucar, :proteina, :sal, :mono, :poli, :fibra, 
-		:kj
+	attr_reader :nombre, :racion, :grasas, :saturadas, :hidratos, :azucar, :proteina, :sal, :mono, :poli, :fibra
 
 	def initialize(nombre, racion, grasas, saturadas, hidratos, azucar, proteina, sal, *opcional)
 		@nombre,@racion = nombre, racion
@@ -61,5 +60,22 @@ class Alimento
 	end
 	def ir_s
 		@ir_s = (@sal*100.0) / 6
+	end
+	def to_s
+		@linea = "#{@nombre}\t Por 100g o ml\t IR (100)\t Ración #{@racion}g\t IR por ración\n"
+		@linea << "Valor energético\t #{self.kj}Kj\t #{self.ir_vkj}%\t #{self.kj_r}\t #{self.ir_vkj}%\n"
+		@linea << "(kj/kcal)\t #{self.kcal}Kcal\t #{self.ir_vkcal}%\t #{self.kcal_r}\t #{self.ir_vkcal}%\n"
+		@linea << "Grasas de las\t #{@grasas}g\t #{self.ir_g}%\n"
+		@linea << "cuales\n"
+		@linea << "Saturadas\t #{@saturadas}g\t #{self.ir_ag}%\n"
+		@linea << "Monoinsaturada\t #{@mono}g\n"
+		@linea << "Polisaturadas\t #{@poli}g\n"
+		@linea << "Hidratos de\t #{@hidratos}g\t #{self.ir_h}%\n"
+		@linea << "carbono de los\n"
+		@linea << "cuales\n"
+		@linea << "Azúcares\t #{@azucar}g\t #{self.ir_az}%\n"		
+		@linea << "Fibra alimenticia\t #{@fibra}g\n"
+		@linea << "Proteinas\t #{@proteina}g\t #{self.ir_p}%\n"
+		@linea 
 	end
 end

@@ -94,8 +94,7 @@ RSpec.describe Nutricion do
 		expect(@alimento2.ir_s).to eq(8.333333333333333334)
 	end
 	it "Salida Formateada" do
-		expect(@alimento1.to_s).to eq()
-		expect(@alimento2.to_s).to eq()
+		expect(@alimento1.to_s).to eq("Leche\t Por 100g o ml\t IR (100)\t Ración 100g\t IR por ración\nValor energético\t 266.6Kj\t 3.173809523809524%\t 266.6\t 3.173809523809524%\n(kj/kcal)\t 51.4Kcal\t 2.57%\t 51.4\t 2.57%\nGrasas de las\t 3.6g\t 5.142857142857143%\ncuales\nSaturadas\t 2.4g\t 12.0%\nMonoinsaturada\t g\nPolisaturadas\t g\nHidratos de\t 4.6g\t 1.769230769230769%\ncarbono de los\ncuales\nAzúcares\t 4.6g\t 5.111111111111111%\nFibra alimenticia\t g\nProteinas\t 3.1g\t 6.2%\n")
 	end
 	
  end
