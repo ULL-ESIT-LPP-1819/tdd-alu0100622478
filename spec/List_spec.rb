@@ -8,7 +8,7 @@ RSpec.describe Lista do
 		end
 		it "Existe head en la lista" do
 			@lista1 = Lista.new()
-			expect(@lista1.head).not_to be_nil
+			expect(@lista1.head).to be_nil
 		end
 	end
 end
