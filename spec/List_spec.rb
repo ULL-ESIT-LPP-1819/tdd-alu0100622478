@@ -10,5 +10,9 @@ RSpec.describe Lista do
 			@lista1 = Lista.new()
 			expect(@lista1.head).to be_nil
 		end
+		it "Existe tail en la lista" do
+			@lista1 = Lista.new()
+			expect(@lista1.tail).to be_nil
+		end
 	end
 end
