@@ -18,6 +18,13 @@ RSpec.describe Lista do
 			@lista1.addt(1)
 			expect(@lista1.head.value).to eq(1)
 		end
+		it "Extraer por la cabeza" do
+			@lista1.addt(1)
+			@lista1.addt(2)
+			@lista1.addt(3)
+			@lista1.poph()
+			expect(@lista1.head.value).to eq(2)
+		end
 
 	end
 end
