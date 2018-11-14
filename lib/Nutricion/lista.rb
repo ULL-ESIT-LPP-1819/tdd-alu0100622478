@@ -16,4 +16,16 @@ class Lista
 			@tail = node 	
 		end	
 	end
+
+	def poph()
+		if @head == nil
+			@head =nil
+			@tail = nil
+			return nil
+		else 
+			pop = @head
+			@head = @head.next
+			return pop.value
+		end
+	end
 end
