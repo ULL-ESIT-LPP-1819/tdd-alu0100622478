@@ -33,13 +33,18 @@ RSpec.describe Lista do
 			@alimento2 = Alimento.new("Muesli con frutas",45,14,5,56,27,6.3,0.5,6.9,1.8,6)
 			@alimento3 = Alimento.new("Café soluble",18,8.3,7.4,65,61,9.8,1.1,nil,nil,3.8)
 			@alimento4 = Alimento.new("Arroz integral",100,2.5,0.5,71,1.2,8.4,0.01,nil,nil,3.4)
-			@alimento5 = Alimento.new("Caldo de carne",10,14,0.7,0.01,13.4,57,nil,nil,22)
+			@alimento5 = Alimento.new("Caldo de carne",10,19.8,14,0.7,0.01,13.4,57,nil,nil,22)
 			@lista1.addt(@alimento1)
 			@lista1.addt(@alimento2)
 			@lista1.addt(@alimento3)
 			@lista1.addt(@alimento4)
 			@lista1.addt(@alimento5)
 			expect(@lista1.poph().sal).to be < 6
+			expect(@lista1.poph().sal).to be < 6
+			expect(@lista1.poph().sal).to be < 6
+			expect(@lista1.poph().sal).to be < 6
+			expect(@lista1.poph().sal).to be > 6
+
 		end
 
 	end
