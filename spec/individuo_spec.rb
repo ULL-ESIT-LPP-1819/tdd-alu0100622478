@@ -49,5 +49,9 @@ RSpec.describe Individuo do
 			expect(@paciente1.to_s).to eq("((Nombre:Pedro; Edad:34; Sexo:1); Peso:85; Altura:1.78 )")
 		end
 
+		it "Expectativa IMC" do
+			expect(@paciente1.imc).to eq("25")
+		end
+
 	end
 end
