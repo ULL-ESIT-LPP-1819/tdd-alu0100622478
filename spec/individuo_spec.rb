@@ -24,7 +24,7 @@ RSpec.describe Individuo do
 
 	describe "#Paciente" do
 		before :all do
-			@paciente1 = Paciente.new()
+			@paciente1 = Paciente.new("Pedro",34,1)
 		end
 		it "Existe paciente" do
 			expect(@paciente1.is_a?(Paciente)).to be(true)
@@ -37,6 +37,12 @@ RSpec.describe Individuo do
 		end
 		it "Superclase" do
 			expect(Paciente.superclass).to be(Individuo)
+		end
+
+		it "Comprobar la herencia" do
+			expect(@paciente1).to respond_to(:nombre)
+			expect(@paciente1).to respond_to(:edad)
+			expect(@paciente1).to respond_to(:sexo)
 		end
 
 
