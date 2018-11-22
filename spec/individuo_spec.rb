@@ -76,7 +76,28 @@ RSpec.describe Individuo do
 			expect(@paciente1.media_axilar).to eq(5)
 			expect(@paciente1.media_pierna).to eq(5)
 		end
+	end
+	describe "#Lista+Individuo" do
+		
+		before :all do
+			@lista1 = Lista.new()
+			@paciente1 = Paciente.new("Pedro",34,1,85,1.78,[95,94,96],[90,91,89],[2,2,3],[4,5,6],
+						  [3,5,4],[4,8,4],[2,6,4],[3,4,5],[1,4,2],[3,4,8],[6,5,4])
+			@paciente2 = Paciente.new("Nuria",23,0,42,1.54,[60,59,60],[80,81,81],[3,4,5],[2,4,3],
+						  [2,1,2],[3,4,3],[4,5,4],[3,6,4],[4,3,4],[5,5,4],[3,4,5])
 
-
+		end
+		it "Existe lista" do
+			expect(@lista1.is_a?(Lista)).to be(true)
+		end
+		it "Herencia Lista Object" do
+			expect(@lista1.is_a?(Object)).to be(true)
+		end
+		it "Clase" do
+			expect(@lista1.class).to be(Lista)
+		end
+		it "Superclase" do
+			expect(Lista.superclass).to be(Object)
+		end
 	end
 end
