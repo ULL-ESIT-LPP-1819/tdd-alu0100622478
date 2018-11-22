@@ -9,6 +9,9 @@ RSpec.describe Individuo do
 		it "Existe la clase" do
 			expect(@individuo1.class).to be(Individuo)
 		end
+		it "Superclase" do
+			expect(Individuo.superclass).to be(Object)
+		end
 		it "Responde a" do
 			expect(@individuo1).to respond_to(:nombre)
 			expect(@individuo1).to respond_to(:edad)
