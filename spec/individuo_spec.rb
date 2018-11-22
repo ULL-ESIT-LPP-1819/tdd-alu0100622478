@@ -20,6 +20,25 @@ RSpec.describe Individuo do
 		it "Prueba to_s individuo" do
 			expect(@individuo1.to_s).to eq("(Nombre:Pedro; Edad:34; Sexo:1)")
 		end
-
 	end	
+
+	describe "#Paciente" do
+		before :all do
+			@paciente1 = Paciente.new()
+		end
+		it "Existe paciente" do
+			expect(@paciente1.is_a?(Paciente)).to be(true)
+		end
+		it "Herencia paciente de individuo"
+			expect(@paciente1.is_a?(Individuo)).to be(true)
+		end
+		it "Clase" do
+			expect(@paciente1.class).to be(Paciente)
+		end
+		it "Superclase" do
+			expect(Paciente.superclass).to be(Individuo)
+		end
+
+
+	end
 end

@@ -9,5 +9,5 @@ class Individuo
 	def to_s()
 		"(Nombre:#{@nombre}; Edad:#{@edad}; Sexo:#{@sexo})"
 	end
-
 end
+
