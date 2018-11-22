@@ -14,6 +14,7 @@ end
 
 class Paciente < Individuo
 
-	def initialize()
+	def initialize(nombre,edad,sexo)
+		super(nombre,edad,sexo)
 	end
 end
