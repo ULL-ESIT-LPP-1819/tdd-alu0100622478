@@ -29,7 +29,7 @@ RSpec.describe Individuo do
 		it "Existe paciente" do
 			expect(@paciente1.is_a?(Paciente)).to be(true)
 		end
-		it "Herencia paciente de individuo"
+		it "Herencia paciente de individuo" do
 			expect(@paciente1.is_a?(Individuo)).to be(true)
 		end
 		it "Clase" do

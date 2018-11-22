@@ -11,3 +11,9 @@ class Individuo
 	end
 end
 
+
+class Paciente < Individuo
+
+	def initialize()
+	end
+end
