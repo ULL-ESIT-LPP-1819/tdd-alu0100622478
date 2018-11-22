@@ -72,8 +72,8 @@ RSpec.describe Individuo do
 			expect(@paciente1.media_supra).to eq(5)
 			expect(@paciente1.media_muslo).to eq(4)
 			expect(@paciente1.media_abdom).to eq(4)
-			expect(@paciente1.media_pecho).to eq(4)
-			expect(@paciente1.media_axilar).to eq(2)
+			expect(@paciente1.media_pecho).to eq(2)
+			expect(@paciente1.media_axilar).to eq(5)
 			expect(@paciente1.media_pierna).to eq(5)
 		end
 

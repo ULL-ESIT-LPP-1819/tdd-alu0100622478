@@ -13,11 +13,18 @@ end
 
 
 class Paciente < Individuo
-	attr_reader :peso, :altura, :c_cin, :c_cad
-	def initialize(nombre,edad,sexo,peso,altura,c_cin,c_cad)
+	attr_reader :peso, :altura, :c_cin, :c_cad, :pc_bici, :pc_trici, :pc_subes, :pc_supra, :pc_muslo, :pc_abdomen,
+		:pc_pecho, :pc_axilar, :pc_pierna
+	def initialize(nombre,edad,sexo,peso,altura,c_cin,c_cad, pc_bici, pc_trici, pc_subes, pc_supra, pc_muslo, 
+		      pc_abdom, pc_pecho, pc_axilar, pc_pierna)
 		super(nombre,edad,sexo)
 		@peso, @altura = peso, altura
 		@c_cin, @c_cad = c_cin, c_cad
+		@pc_bici, @pc_trici = pc_bici, pc_trici
+		@pc_subes, @pc_supra = pc_subes, pc_supra
+		@pc_muslo, @pc_pierna = pc_muslo, pc_pierna
+		@pc_axilar, @pc_abdom = pc_axilar, pc_abdom
+		@pc_pecho = pc_pecho
 	end
 
 	def to_s
@@ -98,5 +105,33 @@ class Paciente < Individuo
 				@rcc = 'WHAT?'
 			end
 		end
+	end
+
+	def media_bici
+		media_ =self.media(@pc_bici)
+	end
+	def media_trici
+		media_ =self.media(@pc_trici)
+	end
+	def media_subes
+		media_ =self.media(@pc_subes)
+	end
+	def media_supra
+		media_ =self.media(@pc_supra)
+	end
+	def media_muslo
+		media_ =self.media(@pc_muslo)
+	end
+	def media_abdom
+		media_ =self.media(@pc_abdom)
+	end
+	def media_pecho
+		media_ =self.media(@pc_pecho)
+	end
+	def media_axilar
+		media_ =self.media(@pc_axilar)
+	end
+	def media_pierna
+		media_ =self.media(@pc_pierna)
 	end
 end
