@@ -85,7 +85,16 @@ RSpec.describe Individuo do
 						  [3,5,4],[4,8,4],[2,6,4],[3,4,5],[1,4,2],[3,4,8],[6,5,4])
 			@paciente2 = Paciente.new("Nuria",23,0,42,1.54,[60,59,60],[80,81,81],[3,4,5],[2,4,3],
 						  [2,1,2],[3,4,3],[4,5,4],[3,6,4],[4,3,4],[5,5,4],[3,4,5])
-
+			@paciente3 = Paciente.new("Laura",12,0,120,1.65,[150,148,149],[110,119,115],[10,12,12],
+						  [13,14,15],[20,30,15],[40,30,20],[50,12,13],[15,14,16],[20,15,13],
+						  [12,15,16],[13,14,20])
+			@paciente4 = Paciente.new("Federíco",80,1,50,1.85,[50,58,56],[54,53,50],[20,12,15],[13,14,16],
+						  [13,14,16],[12,14,15],[13,15,14],[12,16,17],[18,12,13],[45,46,48],
+						  [18,19,22])
+			@paciente5 = Paciente.new("Carlos",26,1,70,2.10,[64,63,62],[85,84,83],[12,14,16],[13,12,11],
+						  [15,12,13],[14,14,13],[12,11,10],[20,23,25],[16,15,21],[13,14,15],
+						  [18,12,14])	
+		
 		end
 		it "Existe lista" do
 			expect(@lista1.is_a?(Lista)).to be(true)
@@ -98,6 +107,18 @@ RSpec.describe Individuo do
 		end
 		it "Superclase" do
 			expect(Lista.superclass).to be(Object)
+		end
+		it "Clasificar por IMC" do
+			@lista1.addt(@paciente1)
+			@lista1.addt(@paciente2)
+			@lista1.addt(@paciente3)
+			@lista1.addt(@paciente4)
+			@lista1.addt(@paciente5)
+			expect(@lista1.poph().imc).to be > 25
+			expect(@lista1.poph().imc).to be < 25
+			expect(@lista1.poph().imc).to be > 25
+			expect(@lista1.poph().imc).to be < 25
+			expect(@lista1.poph().imc).to be < 25
 		end
 	end
 end
