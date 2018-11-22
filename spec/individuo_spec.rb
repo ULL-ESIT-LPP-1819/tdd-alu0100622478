@@ -61,6 +61,9 @@ RSpec.describe Individuo do
 		it "IMC popular" do
 			expect(@paciente1.imc_pop).to eq("Sobrepeso")
 		end
+		it "Relación cintura cadera" do
+			expect(@paciente1.rcc).to eq("Alto")
+		end
 
 	end
 end
