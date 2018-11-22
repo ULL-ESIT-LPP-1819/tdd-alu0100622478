@@ -53,7 +53,7 @@ RSpec.describe Individuo do
 			expect(@paciente1.imc).to eq(26.82742078020452)
 		end
 		it "Expectativa %grasa" do
-			expect(@paciente1.porcentaje_grasa).to eq(26)
+			expect(@paciente1.porcentaje_grasa).to eq(23.812904936245417)
 		end
 
 	end

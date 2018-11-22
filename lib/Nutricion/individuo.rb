@@ -28,4 +28,8 @@ class Paciente < Individuo
 	def imc
 		@imc = (@peso/(@altura*@altura))
 	end
+
+	def porcentaje_grasa
+		@p_grasa = (1.2 * @imc + 0.23 * @edad -10.8 * @sexo -5.4)
+	end
 end
