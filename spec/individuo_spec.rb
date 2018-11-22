@@ -50,7 +50,7 @@ RSpec.describe Individuo do
 		end
 
 		it "Expectativa IMC" do
-			expect(@paciente1.imc).to eq("25")
+			expect(@paciente1.imc).to eq(26.82742078020452)
 		end
 
 	end

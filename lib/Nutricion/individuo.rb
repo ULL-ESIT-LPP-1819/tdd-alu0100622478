@@ -24,4 +24,8 @@ class Paciente < Individuo
 		s << super.to_s
 		s << "; Peso:#{@peso}; Altura:#{@altura} )"
 	end
+
+	def imc
+		@imc = (@peso/(@altura*@altura))
+	end
 end
