@@ -13,10 +13,11 @@ end
 
 
 class Paciente < Individuo
-	attr_reader :peso, :altura
-	def initialize(nombre,edad,sexo,peso,altura)
+	attr_reader :peso, :altura, :c_cin, :c_cad
+	def initialize(nombre,edad,sexo,peso,altura,c_cin,c_cad)
 		super(nombre,edad,sexo)
 		@peso, @altura = peso, altura
+		@c_cin, @c_cad = c_cin, c_cad
 	end
 
 	def to_s
@@ -62,6 +63,40 @@ class Paciente < Individuo
 			@oms = 'Obesidad'
 		else
 			@oms = 'WHAT?'
+		end
+	end
+	def media(valor)
+		aux = 0
+		valor.each do |media|
+			aux += media.to_i
+		end
+		@media = aux / valor.length	
+	end
+
+	def rcc
+		rcc_ = (self.media(@c_cin)/self.media(@c_cad))
+		if @sexo == 0
+			if 0.72 <= rcc_ and rcc_ < 0.78
+				@rcc = 'Bajo'
+			elsif 0.78 <= rcc_ and rcc_ < 0.82
+				@rcc = 'Moderado'
+			elsif 0.82 <= rcc_
+				@rcc = 'Alto'
+			else
+				@rcc = 'WHAT?'
+			end
+		elsif @sexo == 1
+			if 0.83 <= rcc_ and rcc_ < 0.88
+				@rcc = 'Bajo'
+			elsif 0.88 <= rcc_ and rcc_ < 0.95
+				@rcc = 'Moderado'
+			elsif 0.95 <= rcc_ and rcc_ < 1.01
+				@rcc = 'Alto'
+			elsif 1.01 <= rcc_
+				@rcc = 'Muy alto'
+			else
+				@rcc = 'WHAT?'
+			end
 		end
 	end
 end
