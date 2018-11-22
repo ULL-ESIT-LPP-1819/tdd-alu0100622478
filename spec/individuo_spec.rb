@@ -46,7 +46,7 @@ RSpec.describe Individuo do
 		end
 
 		it "Comprobar to_s()" do
-			expect(@paciente1.to_s).to eq("(Nombre:Pedro; Edad:34; Sexo:1; Peso:85)")
+			expect(@paciente1.to_s).to eq("((Nombre:Pedro; Edad:34; Sexo:1); Peso:85 )")
 		end
 
 	end

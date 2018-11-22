@@ -13,8 +13,15 @@ end
 
 
 class Paciente < Individuo
-
-	def initialize(nombre,edad,sexo)
+	attr_reader :peso
+	def initialize(nombre,edad,sexo,peso)
 		super(nombre,edad,sexo)
+		@peso = peso
+	end
+
+	def to_s
+		s = "("
+		s << super.to_s
+		s << "; Peso:#{@peso} )"
 	end
 end
