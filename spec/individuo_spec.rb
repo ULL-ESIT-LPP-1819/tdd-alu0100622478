@@ -6,6 +6,11 @@ RSpec.describe Individuo do
 		it "Existe individuo" do
 			expect(@individuo1.is_a?(Individuo)).to be(true)
 		end
+		it "Responde a" do
+			expect(@individuo1).to respond_to(:nombre)
+			expect(@individuo1).to respond_to(:edad)
+			expect(@individuo1).to respond_to(:sexo)
+		end
 		it "Prueba to_s" do
 			expect(@individuo1.to_s).to eq("(Nombre:Pedro; Edad:34; Sexo:1)")
 		end
