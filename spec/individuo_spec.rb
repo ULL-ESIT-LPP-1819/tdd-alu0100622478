@@ -24,7 +24,7 @@ RSpec.describe Individuo do
 
 	describe "#Paciente" do
 		before :all do
-			@paciente1 = Paciente.new("Pedro",34,1)
+			@paciente1 = Paciente.new("Pedro",34,1,85)
 		end
 		it "Existe paciente" do
 			expect(@paciente1.is_a?(Paciente)).to be(true)
@@ -46,7 +46,7 @@ RSpec.describe Individuo do
 		end
 
 		it "Comprobar to_s()" do
-			expect(@paciente1.to_s).to eq("(Nombre:Pedro; Edad:34; Sexo:1)")
+			expect(@paciente1.to_s).to eq("(Nombre:Pedro; Edad:34; Sexo:1; Peso:85)")
 		end
 
 	end
