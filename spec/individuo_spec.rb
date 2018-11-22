@@ -55,6 +55,12 @@ RSpec.describe Individuo do
 		it "Expectativa %grasa" do
 			expect(@paciente1.porcentaje_grasa).to eq(23.812904936245417)
 		end
+		it "IMC según la OMS" do
+			expect(@paciente1.imc_oms).to eq("Sobrepeso")
+		end
+		it "IMC popular" do
+			expect(@paciente1.imc_pop).to eq("Sobrepeso")
+		end
 
 	end
 end
