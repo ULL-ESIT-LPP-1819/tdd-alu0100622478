@@ -24,7 +24,8 @@ RSpec.describe Individuo do
 
 	describe "#Paciente" do
 		before :all do
-			@paciente1 = Paciente.new("Pedro",34,1,85,1.78,[95,94,96],[90,91,89])
+			@paciente1 = Paciente.new("Pedro",34,1,85,1.78,[95,94,96],[90,91,89],[2,2,3],[4,5,6],
+						  [3,5,4],[4,8,4],[2,6,4],[3,4,5],[1,4,2],[3,4,8],[6,5,4])
 		end
 		it "Existe paciente" do
 			expect(@paciente1.is_a?(Paciente)).to be(true)
