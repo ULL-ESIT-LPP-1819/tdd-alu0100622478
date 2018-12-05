@@ -1,4 +1,5 @@
 class Individuo
+	include Comparable
 	attr_reader :nombre, :edad, :sexo
 	def initialize(nombre,edad,sexo)
 		@nombre=nombre
@@ -8,6 +9,9 @@ class Individuo
 
 	def to_s()
 		"(Nombre:#{@nombre}; Edad:#{@edad}; Sexo:#{@sexo})"
+	end
+	def <=>(another)
+		@edad <=> another.edad
 	end
 end
 
