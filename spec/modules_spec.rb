@@ -10,6 +10,10 @@ RSpec.describe Module do
 		end
 		it "Existe comparable Alimento (Etiqueta)" do
 			expect(@leche < @muesli).to be true
+			expect(@muesli > @cafe).to be true
+			expect(@muesli <= @leche).to be false
+			expect(@leche == @cafe).to be false
+			expect(@caldo >= @arroz). to be true
 		end
 	end
 
