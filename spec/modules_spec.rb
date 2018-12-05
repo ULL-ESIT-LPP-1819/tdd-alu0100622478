@@ -54,8 +54,8 @@ RSpec.describe Module do
 			expect(@paciente1 > @paciente2).to be true		
 			expect(@paciente3 < @paciente2).to be false		
 			expect(@paciente3 == @paciente3).to be true		
-			expect(@paciente3 <= @paciente4).to be true		
-			expect(@paciente4 >= @paciente5).to be true		
+			expect(@paciente3 <= @paciente4).to be false		
+			expect(@paciente4 >= @paciente5).to be false
 		end
 	end
 		

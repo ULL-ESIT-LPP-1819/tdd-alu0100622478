@@ -81,7 +81,7 @@ class Paciente < Individuo
 		valor.each do |media|
 			aux += media.to_i
 		end
-		@media = aux / valor.length	
+		@media = a-ux / valor.length	
 	end
 
 	def rcc
@@ -137,5 +137,8 @@ class Paciente < Individuo
 	end
 	def media_pierna
 		media_ =self.media(@pc_pierna)
+	end
+	def <=>(other)
+		self.imc <=> other.imc
 	end
 end
