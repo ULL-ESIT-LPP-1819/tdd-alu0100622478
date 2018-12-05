@@ -1,4 +1,5 @@
 class Alimento
+	include Comparable
 	attr_reader :nombre, :racion, :grasas, :saturadas, :hidratos, :azucar, :proteina, :sal, :mono, :poli, :fibra
 
 	def initialize(nombre, racion, grasas, saturadas, hidratos, azucar, proteina, sal, *opcional)
@@ -77,5 +78,9 @@ class Alimento
 		@linea << "Fibra alimenticia\t #{@fibra}g\n"
 		@linea << "Proteinas\t #{@proteina}g\t #{self.ir_p}%\n"
 		@linea 
+	end
+
+	def <=>(another)
+		self.kcal<=> another.kcal
 	end
 end
