@@ -1,12 +1,16 @@
+# @author Edgar Mesa Santana
 Node = Struct.new(:value, :next, :prev)
 
+# Clase que define una lista doblemente enlazada
+# @author Edgar Mesa Santana
 class Lista
 	include Enumerable
 	attr_reader :head, :tail
 	def initialize()
 		@head = @tail = nil
 	end
-
+	
+	# Método para añadir un elemento de la lista (Por detrás)
 	def addt(value)		#Agrega por la cola  []->[]->[] 
 		if @head == nil
 			@head = Node.new(value, nil, nil)
@@ -17,7 +21,9 @@ class Lista
 			@tail = node 	
 		end	
 	end
-
+	
+	# Método para sacar un elemento de la lista (Por delante)
+	# @return [nodo]
 	def poph()
 		if @head == nil
 			@head =nil
@@ -29,7 +35,8 @@ class Lista
 			return pop.value
 		end
 	end
-
+	
+	# Método para la iteración de la lista
 	def each ()
 		node = Node.new(nil,nil,nil)
 		node = @head
