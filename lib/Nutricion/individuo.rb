@@ -81,7 +81,7 @@ class Paciente < Individuo
 		valor.each do |media|
 			aux += media.to_i
 		end
-		@media = a-ux / valor.length	
+		@media = aux / valor.length	
 	end
 
 	def rcc
