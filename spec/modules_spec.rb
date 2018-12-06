@@ -107,12 +107,12 @@ RSpec.describe Module do
 			@lista3.addt(@paciente5)
 			
 			expect(@lista1.count).to eq(4)
-			expect(@lista2.collect{|ind| ind.nombre}).to eq("Pedro", "Nuria", "Laura", "Federíco", "Carlos")
+			expect(@lista2.collect{|ind| ind.nombre}).to eq(["Pedro", "Nuria", "Laura", "Federíco", "Carlos"])
 			expect(@lista3.select{|i| i.imc < 25}).to eq([@paciente2, @paciente4, @paciente5])
 			expect(@lista1.max).to eq(13)
 			expect(@lista1.min).to eq(1)
-			expect(@lista1.sort).to eq(1,2,6,13)
-			expect(@lista2.sort).to eq(@individuo3,@individuo2,@individuo5,@individuo1,@individuo4)
+			expect(@lista1.sort).to eq([1,2,6,13])
+			expect(@lista2.sort).to eq([@individuo3,@individuo2,@individuo5,@individuo1,@individuo4])
 		end
 	
 	end
