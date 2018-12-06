@@ -1,3 +1,4 @@
+# @author Edgar Mesa Santana
 class Alimento
 	include Comparable
 	attr_reader :nombre, :racion, :grasas, :saturadas, :hidratos, :azucar, :proteina, :sal, :mono, :poli, :fibra
@@ -12,7 +13,8 @@ class Alimento
 		@poli = opcional[1]
 		@fibra = opcional[2]
 	end
-
+	# Función kilo julios
+	# @return [Float] 
 	def kj
 		if @fibra != nil 
 			@kj = (@grasas * 37 + @hidratos * 17 + @fibra * 8 + @proteina * 17 + @sal * 25) 
