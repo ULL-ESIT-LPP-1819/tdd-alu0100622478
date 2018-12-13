@@ -42,6 +42,18 @@ RSpec.describe Alimento do
 			expect(@paciente1).to respond_to(:actividad)
 			expect(@paciente2.get).to be(1349.93)
 		end
-		
+
+		it "Utilizando reduce en menú" do
+			expect(@menu1.reduce(0){|x, obj|x + obj.kj}).to be(6248.450000000001)
+		end
+
+		it "Accediendo al get del primer individuo de la lista" do
+			expect(@pacientes[0].get).to be(1977.25)
+		end
+
+		it "Creando un array de menus con los kj de cada menu" do
+			menu = @menus.collect{|men| men.reduce(0){|i, obj|i + obj.kj}} 
+			expect(menu).to eq([6248.450000000001, 5544.55, 15705.550000000001, 4866.35, 6239.700000000001])
+		end
 	end
 end
