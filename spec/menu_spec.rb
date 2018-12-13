@@ -28,6 +28,15 @@ RSpec.describe Alimento do
 			@paciente5 = Paciente.new("Carlos",26,1,70,2.10,[64,63,62],[85,84,83],[12,14,16],[13,12,11],
 						  [15,12,13],[14,14,13],[12,11,10],[20,23,25],[16,15,21],[13,14,15],
 						  [18,12,14],0.27)
+			
+			@menu1 = [@leche,@arroz,@pasta,@ternera,@pollo]
+			@menu2 = [@arroz,@ternera,@atun,@yogurt,@berenjena]
+			@menu3 = [@arroz,@pizza,@cola,@galletas,@pasta]
+			@menu4 = [@arroz,@pasta,@pollo,@berenjena,@tofu]
+			@menu5 = [@tofu,@galletas,@pan,@ternera,@pasta]
+			
+			@menus = [@menu1,@menu2,@menu3,@menu4,@menu5]
+			@pacientes = [@paciente1,@paciente2,@paciente3,@paciente4,@paciente5]
 		end
 		it "Actividad Física" do
 			expect(@paciente1).to respond_to(:actividad)
