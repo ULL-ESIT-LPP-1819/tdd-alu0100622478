@@ -1,4 +1,4 @@
-RSpec.describe Menu do
+RSpec.describe Alimento do
 	describe "#Creación de un menú" do
 		before :all do
 			@leche = Alimento.new("Leche",100,3.6,2.4,4.6,4.6,3.1,0.1)

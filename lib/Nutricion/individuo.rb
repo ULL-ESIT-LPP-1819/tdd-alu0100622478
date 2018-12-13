@@ -27,9 +27,9 @@ end
 # @author Edgar Mesa Santana
 class Paciente < Individuo
 	attr_reader :peso, :altura, :c_cin, :c_cad, :pc_bici, :pc_trici, :pc_subes, :pc_supra, :pc_muslo, :pc_abdomen,
-		:pc_pecho, :pc_axilar, :pc_pierna
+		:pc_pecho, :pc_axilar, :pc_pierna, :actividad 
 	def initialize(nombre,edad,sexo,peso,altura,c_cin,c_cad, pc_bici, pc_trici, pc_subes, pc_supra, pc_muslo, 
-		      pc_abdom, pc_pecho, pc_axilar, pc_pierna)
+		      pc_abdom, pc_pecho, pc_axilar, pc_pierna,*opcional)
 		super(nombre,edad,sexo)
 		@peso, @altura = peso, altura
 		@c_cin, @c_cad = c_cin, c_cad
@@ -38,6 +38,7 @@ class Paciente < Individuo
 		@pc_muslo, @pc_pierna = pc_muslo, pc_pierna
 		@pc_axilar, @pc_abdom = pc_axilar, pc_abdom
 		@pc_pecho = pc_pecho
+		@actividad = opcional[0]
 	end
 	
 	# Función que muestra lso datos de un paciente
@@ -185,5 +186,20 @@ class Paciente < Individuo
 	# @return [Boolean] 
 	def <=>(other)
 		self.imc <=> other.imc
+	end
+	#Función para calcular el gasto energético total
+	#@return [Float]
+	def get
+		if @sexo == 0
+			geb = (10*@peso)+(6.25*@altura*100)-(5*@edad)-161
+			ef_term = geb * 0.1
+			gaf = geb * @actividad
+			return get = geb + ef_term + gaf
+		elsif @sexo == 1		
+			geb = (10*@peso)+(6.25*@altura*100)-(5*@edad)+5
+			ef_term = geb * 0.1
+			gaf = geb * @actividad
+			return get = geb + ef_term + gaf
+		end
 	end
 end
