@@ -37,7 +37,7 @@ RSpec.describe Alimento do
 			@menu6 = [@leche,@pollo,@tofu,@yogurt,@leche]
 			
 			@menus = [@menu1,@menu2,@menu3,@menu4,@menu5,@menu6]
-			@pacientes = [@paciente1,@paciente2,@paciente3,@paciente4,@paciente5]
+			@pacientes = [@paciente1,@paciente2,@paciente3,@paciente4,@paciente5,@paciente1]
 		end
 		it "Actividad Física" do
 			expect(@paciente1).to respond_to(:actividad)
@@ -55,7 +55,7 @@ RSpec.describe Alimento do
 
 		it "Creando un array de individuos, con los gastos energéticos" do
 			pacientes_get = @pacientes.collect{ |pac| pac.get} 
-			expect(pacientes_get).to eq([1977.25, 1349.93, 2452.505, 2068.45, 2585.875])
+			expect(pacientes_get).to eq([1977.25, 1349.93, 2452.505, 2068.45, 2585.875, 1977.25])
 		end
 		it "Diestas para cada individuo" do
 			menu = @menus.collect{|men| men.reduce(0){|i, obj|i + obj.kj}} 
@@ -65,7 +65,9 @@ RSpec.describe Alimento do
 			expect(menu_min).to eq([5623.6050000000005, 4990.095, 14134.995, 4379.715, 5615.7300000000005, 1935.1799999999998])
 			expect(menu_max).to eq([6873.295000000001, 6099.005000000001, 17276.105000000003, 5352.985000000001, 6863.670000000001, 2365.22])
 
-				
+			aux = pacientes_get.zip(menu_min,menu_max)
+			aux_ordenado=aux.collect{|i| i.sort{|x,y| x <=> y}}
+			expect(aux_ordenado.collect{|i| i.collect{|x| x}} == aux.collect{|i| i.collect{|x| x}}).to be(false)
 		end
 	end
 end
