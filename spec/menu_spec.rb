@@ -55,5 +55,10 @@ RSpec.describe Alimento do
 			menu = @menus.collect{|men| men.reduce(0){|i, obj|i + obj.kj}} 
 			expect(menu).to eq([6248.450000000001, 5544.55, 15705.550000000001, 4866.35, 6239.700000000001])
 		end
+
+		it "Creando un array de individuos, con los gastos energéticos" do
+			pacientes_get = @pacientes.collect{ |pac| pac.get} 
+			expect(pacientes_get).to eq([1977.25, 1349.93, 2452.505, 2068.45, 2585.875])
+		end
 	end
 end
