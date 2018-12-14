@@ -66,8 +66,8 @@ RSpec.describe Alimento do
 			expect(menu_max).to eq([6873.295000000001, 6099.005000000001, 17276.105000000003, 5352.985000000001, 6863.670000000001, 2365.22])
 
 			aux = pacientes_get.zip(menu_min,menu_max)
-			aux_ordenado=aux.collect{|i| i.sort{|x,y| x <=> y}}
-			//expect(aux_ordenado.collect{|i| i.collect{|x| x}} == aux.collect{|i| i.collect{|x| x}}).to be(false)
+			#aux_ordenado=aux.collect{|i| i.sort{|x,y| x <=> y}}
+			#expect(aux_ordenado.collect{|i| i.collect{|x| x}} == aux.collect{|i| i.collect{|x| x}}).to be(false)
 		end
 	end
 end
