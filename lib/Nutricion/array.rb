@@ -13,4 +13,10 @@ class Array
 		end
 		aux_a
 	end
+
+	def byeach()
+		aux_a = self
+		loop until aux_a.each_cons(2).with_index.none?{|(x,y),i| aux_a[i],aux_a[i+1] = y,x if x > y}
+		aux_a
+	end
 end

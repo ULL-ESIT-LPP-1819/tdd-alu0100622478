@@ -70,4 +70,10 @@ class Lista
 		end
 		aux_a
 	end
+
+	def byeach()
+		aux_a = self.poph_non_stop
+		loop until aux_a.each_cons(2).with_index.none?{|(x,y),i| aux_a[i],aux_a[i+1] = y,x if x > y}
+		aux_a
+	end
 end

@@ -74,7 +74,7 @@ RSpec.describe Alimento do
 		end
 	end
 	describe "#Nuevo menu" do
-		before :all do
+		before :each do
 		
 			@leche = Alimento.new("Leche",100,3.6,2.4,4.6,4.6,3.1,0.1)
 			@arroz = Alimento.new("Arroz integral",100,2.5,0.5,71,1.2,8.4,0.01,nil,nil,3.4)
