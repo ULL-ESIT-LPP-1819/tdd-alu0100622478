@@ -64,6 +64,7 @@ RSpec.describe Alimento do
 			menu_max = menu.collect{|i| i * 1.1}
 			expect(menu_min).to eq([5623.6050000000005, 4990.095, 14134.995, 4379.715, 5615.7300000000005, 1935.1799999999998])
 			expect(menu_max).to eq([6873.295000000001, 6099.005000000001, 17276.105000000003, 5352.985000000001, 6863.670000000001, 2365.22])
+<<<<<<< HEAD
 			
 			#expect(pacientes_get.map{|i| i} <= menu_min.map{|i| i}).to be false 
 			aux = menu_min.zip(pacientes_get, menu_max)
@@ -148,6 +149,12 @@ RSpec.describe Alimento do
 		it "#Ordenados con un bucle for" do
 			menus_kcal = @menus.collect{|men| men.reduce(0){|i, obj|i + obj.kcal}} 
 			expect(menus_kcal.byfor).to be([])
+=======
+
+			aux = pacientes_get.zip(menu_min,menu_max)
+			#aux_ordenado=aux.collect{|i| i.sort{|x,y| x <=> y}}
+			#expect(aux_ordenado.collect{|i| i.collect{|x| x}} == aux.collect{|i| i.collect{|x| x}}).to be(false)
+>>>>>>> 16fdf0b7761d0a77a759088801c774bf608fe2c8
 		end
 	end
 end
