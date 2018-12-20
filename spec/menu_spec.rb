@@ -133,16 +133,16 @@ RSpec.describe Alimento do
 						  [15,12,13],[14,14,13],[12,11,10],[10,13,15],[16,15,21],[13,14,15],
 						  [18,12,14],0.54)		
 			@lista_ind = Lista.new()
-			@lista_ind.addt(@paciente1)
-			@lista_ind.addt(@paciente2)
-			@lista_ind.addt(@paciente3)
-			@lista_ind.addt(@paciente4)
-			@lista_ind.addt(@paciente5)
-			@lista_ind.addt(@paciente6)
-			@lista_ind.addt(@paciente7)
-			@lista_ind.addt(@paciente8)
-			@lista_ind.addt(@paciente9)
-			@lista_ind.addt(@paciente10)
+			@lista_ind.addt(@paciente1.get)
+			@lista_ind.addt(@paciente2.get)
+			@lista_ind.addt(@paciente3.get)
+			@lista_ind.addt(@paciente4.get)
+			@lista_ind.addt(@paciente5.get)
+			@lista_ind.addt(@paciente6.get)
+			@lista_ind.addt(@paciente7.get)
+			@lista_ind.addt(@paciente8.get)
+			@lista_ind.addt(@paciente9.get)
+			@lista_ind.addt(@paciente10.get)
 			
 		end
 
@@ -151,7 +151,7 @@ RSpec.describe Alimento do
 			expect(menus_kcal).to eq([1047.66, 821.56, 3232.06, 954.2599999999999, 1136.5, 365.99999999999994, 1118.76, 594.06, 2528.7, 924.1999999999999])
 			expect(menus_kcal.byfor).to eq([365.99999999999994, 594.06, 821.56,924.1999999999999, 954.2599999999999, 1047.66, 1118.76, 1136.5, 2528.7, 3232.06])
 			
-			expect(@lista_ind.byfor).to eq([])
+			expect(@lista_ind.byfor).to eq([1349.93, 1766.255, 1977.25, 2036.505, 2068.45, 2219.25, 2452.505, 2585.875, 2662.95, 2673.2])
 		end
 	end
 end

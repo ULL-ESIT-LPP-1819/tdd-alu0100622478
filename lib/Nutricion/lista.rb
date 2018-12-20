@@ -35,6 +35,15 @@ class Lista
 			return pop.value
 		end
 	end
+	#Método para realizar poph() hasta que no quede nada en la lista
+	# @return [nodo]
+	def poph_non_stop()
+		aux = []
+		while @head != nil
+			aux << self.poph
+		end
+		aux
+	end
 	
 	# Método para la iteración de la lista
 	def each ()
@@ -48,6 +57,17 @@ class Lista
 	end
 
 	def byfor()
-		
+		aux_a = self.poph_non_stop
+		n = aux_a.size
+		for i in 1..n
+			for j in 1..n-i
+				if aux_a[j-1] >= aux_a[j]
+					aux = aux_a[j-1]
+					aux_a[j-1] = aux_a[j]
+					aux_a[j] = aux
+				end
+			end
+		end
+		aux_a
 	end
 end
