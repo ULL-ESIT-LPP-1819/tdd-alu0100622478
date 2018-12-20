@@ -46,4 +46,8 @@ class Lista
 			node = node.next
 		end
 	end
+
+	def byfor()
+		
+	end
 end
