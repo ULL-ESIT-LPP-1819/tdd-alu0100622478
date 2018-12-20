@@ -1,4 +1,7 @@
 RSpec.describe Alimento do
+	require 'benchmark'
+	include Benchmark
+
 	describe "#Creación de un menú" do
 		before :all do
 			@leche = Alimento.new("Leche",100,3.6,2.4,4.6,4.6,3.1,0.1)
@@ -174,6 +177,17 @@ RSpec.describe Alimento do
 			expect(ordenado_lista_get).to eq([1349.93, 1766.255, 1977.25, 2036.505, 2068.45, 2219.25, 2452.505, 2585.875, 2662.95, 2673.2])
 			
 			
+		end
+		it "Benchmark" do
+			menus_kcal = @menus.collect{|men| men.reduce(0){|i, obj|i + obj.kcal}}
+			Benchmark.bm(7) do |x|
+				x.report("for_array:") {menus_kcal.byfor}
+				x.report("for_lista:") {@lista_ind.byfor}
+				x.report("each_array:"){menus_kcal.byeach}
+				x.report("each_lista:"){@lista_ind.byeach}
+				x.report("sort_array:"){menus_kcal.sort{|x,y| x <=> y}}
+				x.report("sort_:lista"){@lista_ind.sort{|x,y| x <=> y}}
+			end
 		end
 	end
 end
