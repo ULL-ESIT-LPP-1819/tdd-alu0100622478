@@ -150,6 +150,8 @@ RSpec.describe Alimento do
 			menus_kcal = @menus.collect{|men| men.reduce(0){|i, obj|i + obj.kcal}}
 			expect(menus_kcal).to eq([1047.66, 821.56, 3232.06, 954.2599999999999, 1136.5, 365.99999999999994, 1118.76, 594.06, 2528.7, 924.1999999999999])
 			expect(menus_kcal.byfor).to eq([365.99999999999994, 594.06, 821.56,924.1999999999999, 954.2599999999999, 1047.66, 1118.76, 1136.5, 2528.7, 3232.06])
+			
+			expect(@lista_ind.byfor).to eq([])
 		end
 	end
 end
